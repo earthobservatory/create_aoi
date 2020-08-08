@@ -97,7 +97,11 @@ def generate_label(label, aoi_type):
     label = re.sub(r"[^a-zA-Z0-9_]+", '', label.replace(' ', '_'))
     if label.startswith('AOI_'):
         label = label.lstrip('AOI_')
-    return 'AOI_{0}_{1}'.format(aoi_type, label)
+
+    if aoi_type:
+        return 'AOI_{0}_{1}'.format(aoi_type, label)
+    else:
+        return 'AOI_{1}'.format(label)
 
 def validate_type(aoi_type):
     '''simply strips non-chars/ints & replaces spaces with underscore'''
