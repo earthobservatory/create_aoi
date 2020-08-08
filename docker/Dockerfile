@@ -1,4 +1,5 @@
-FROM hysds/pge-base:develop-es1
+FROM hysds/pge-gdal:latest
+
 MAINTAINER jlinick "Justin.P.Linick@jpl.nasa.gov"
 LABEL description="PGE for AOI creation"
 
